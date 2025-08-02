@@ -1,0 +1,22 @@
+[workspace]
+members = [
+  "YotferDisc",
+  "YotferTele",
+  "api",
+  "service_core"
+]
+
+resolver = "2"
+
+
+[profile.dev]
+opt-level=0
+
+[profile.release]
+opt-leve=3
+lto="thin"
+
+[workspace.dependencies]
+poise = "0.5.7"
+tokio = { version = "1", features = ["macros", "rt-multi-thread"] }
+dotenvy = "0.15"
